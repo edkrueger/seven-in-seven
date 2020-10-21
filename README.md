@@ -1,1 +1,1 @@
-# Soulions to "Seven \* in Seven Weeks" books
+# Solutions to "Seven \* in Seven Weeks" books
