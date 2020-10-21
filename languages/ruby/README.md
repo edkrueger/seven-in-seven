@@ -12,3 +12,5 @@ Information about Ruby's regular expressions: https://rubyapi.org/2.7/o/regexp
 Information about Ruby's ranges: https://rubyapi.org/2.7/o/range  
 
 Do:  
+[Exercises](day1.rb)  
+[Bonus](day1_bonus.rb)
