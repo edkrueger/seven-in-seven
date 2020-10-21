@@ -14,3 +14,16 @@ Information about Ruby's ranges: https://rubyapi.org/2.7/o/range
 Do:  
 [Exercises](day1.rb)  
 [Bonus](day1_bonus.rb)
+
+## Day 2
+
+Find:  
+Find out how to access files with and without code blocks. What is the benefit of the code block?  
+How would you translate a hash to an array? Can you translate arrays to hashes?  
+Can you iterate through a hash?  
+You can use Ruby arrays as stacks/ What other common data structures do arrays support?  
+
+Do:
+Print an array of 16 by 4 using just `each` and then with `each_slice` in `Enumerable`. [Solution](day2_16_by_4.rb)  
+Make and improved tree. [Solution](day2_improved_tree.rb)  
+Write a simple grep/ [Solution](day2_simple_grep.rb)  
