@@ -1,1 +1,1 @@
-# Soulions for Ruby
+# Solutions for Ruby
