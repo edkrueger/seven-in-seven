@@ -1,27 +1,28 @@
 class Tree
     attr_accessor :children, :node_name
 
-    def initialize(name, chidren=[])
-        @chidren = children
-        @node_name = node_name
+    def initialize(name, children=[])
+        @children = children
+        @node_name = name
+    end
+
+    def visit_all(&block)
+        visit &block
+        children.each {|c| c.visit_all &block}
     end
 
     def visit(&block)
         block.call self
     end
-
-    def visit_all(&block)
-        visit &block
-        chidren.each {|c| c.visit_all &block}
-    end
+end
 
 if $PROGRAM_NAME == __FILE__
 
-    ruby_tree = Tree("Ruby", [(Tree("Reia"), Tree("MacRuby"))])
-    
+    ruby_tree = Tree.new("Ruby", [Tree.new("Reia"), Tree.new("MacRuby")])
+
     puts "visiting a node"
-    puts ruby_tree.visit {|node| puts node.node_name}
+    ruby_tree.visit {|node| puts node.node_name}
 
     puts "visiting entire tree"
-    puts ruby_tree.visit_all {|node| puts node.node_name}
+    ruby_tree.visit_all {|node| puts node.node_name}
 end
