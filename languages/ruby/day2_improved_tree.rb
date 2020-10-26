@@ -16,6 +16,27 @@ class Tree
     end
 end
 
+# class ImprovedTree < Tree
+
+#     def initialize(name, children=[])
+
+#         super(name, children)
+
+#     end
+# end
+
+class ImprovedTree < Tree
+
+    def initialize(tree_hash)
+
+        root = tree_hash.keys[0]
+        children = []
+        tree_hash[root].each {|k, v| children.push(ImprovedTree.new({k => v}))}
+        super(root, children)
+
+    end
+end
+
 if $PROGRAM_NAME == __FILE__
 
     ruby_tree = Tree.new("Ruby", [Tree.new("Reia"), Tree.new("MacRuby")])
@@ -25,4 +46,16 @@ if $PROGRAM_NAME == __FILE__
 
     puts "visiting entire tree"
     ruby_tree.visit_all {|node| puts node.node_name}
+
+
+    improved_tree_input = {'grandpa' => {'dad' => {'child_1' => {}, 'child_2' => {}}, 'uncle' => {'child_3' => {}, 'child_4' => {}}}}
+
+    improved_tree = ImprovedTree.new(improved_tree_input)
+
+    # puts "visiting a node"
+    improved_tree.visit {|node| puts node.node_name}
+
+    # puts "visiting entire tree"
+    improved_tree.visit_all {|node| puts node.node_name}
+
 end
