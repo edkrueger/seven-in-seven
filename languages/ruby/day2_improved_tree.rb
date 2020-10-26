@@ -16,15 +16,6 @@ class Tree
     end
 end
 
-# class ImprovedTree < Tree
-
-#     def initialize(name, children=[])
-
-#         super(name, children)
-
-#     end
-# end
-
 class ImprovedTree < Tree
 
     def initialize(tree_hash)
@@ -52,10 +43,10 @@ if $PROGRAM_NAME == __FILE__
 
     improved_tree = ImprovedTree.new(improved_tree_input)
 
-    # puts "visiting a node"
+    puts "visiting a node"
     improved_tree.visit {|node| puts node.node_name}
 
-    # puts "visiting entire tree"
+    puts "visiting entire tree"
     improved_tree.visit_all {|node| puts node.node_name}
 
 end
