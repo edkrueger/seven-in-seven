@@ -21,8 +21,7 @@ class ImprovedTree < Tree
     def initialize(tree_hash)
 
         root = tree_hash.keys[0]
-        children = []
-        tree_hash[root].each {|k, v| children.push(self.class.new({k => v}))}
+        children = tree_hash[root].map {|k, v| self.class.new({k => v})}
         super(root, children)
 
     end
