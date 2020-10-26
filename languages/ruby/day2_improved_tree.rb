@@ -22,7 +22,7 @@ class ImprovedTree < Tree
 
         root = tree_hash.keys[0]
         children = []
-        tree_hash[root].each {|k, v| children.push(ImprovedTree.new({k => v}))}
+        tree_hash[root].each {|k, v| children.push(self.class.new({k => v}))}
         super(root, children)
 
     end
