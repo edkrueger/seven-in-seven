@@ -19,11 +19,19 @@ Do:
 
 Find:  
 Find out how to access files with and without code blocks. What is the benefit of the code block?  
-How would you translate a hash to an array? Can you translate arrays to hashes?  
-Can you iterate through a hash?  
-You can use Ruby arrays as stacks/ What other common data structures do arrays support?  
+With code block: https://rubyapi.org/2.7/o/file#method-c-open  
+Without code block: https://rubyapi.org/2.7/o/file#method-c-new  
+The benefit of using the code block is that the file is automatically closed.  
+  
+How would you translate a hash to an array? https://rubyapi.org/2.7/o/hash#method-i-to_a  
+Can you translate arrays to hashes? Yes: `a.map.with_index {|e, i| [i, e] }.to_h`  
+  
+Can you iterate through a hash?  Yes: https://rubyapi.org/2.7/o/hash#method-i-each  
+  
+You can use Ruby arrays as stacks. What other common data structures do arrays support?  
+Queues, Dequeues, Matrices, Hash Maps  
 
 Do:
 Print an array of 16 by 4 using just `each` and then with `each_slice` in `Enumerable`. [Solution](day2_16_by_4.rb)  
 Make and improved tree. [Solution](day2_improved_tree.rb)  
-Write a simple grep/ [Solution](day2_simple_grep.rb)  
+Write a simple grep. [Solution](day2_simple_grep.rb)  
