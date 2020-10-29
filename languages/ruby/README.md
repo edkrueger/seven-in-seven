@@ -35,3 +35,7 @@ Do:
 Print an array of 16 by 4 using just `each` and then with `each_slice` in `Enumerable`. [Solution](day2_16_by_4.rb)  
 Make and improved tree. [Solution](day2_improved_tree.rb)  
 Write a simple grep. [Solution](day2_simple_grep.rb)  
+
+## Day 3
+
+Modify the CSV application to support an `each` method to return a `CsvRow` object . Use `missing method` on that `CsvRow` to return the value for the column for a given heading. [Solution](day_3.rb)
