@@ -38,4 +38,4 @@ Write a simple grep. [Solution](day2_simple_grep.rb)
 
 ## Day 3
 
-Modify the CSV application to support an `each` method to return a `CsvRow` object . Use `missing method` on that `CsvRow` to return the value for the column for a given heading. [Solution](day_3.rb)
+Modify the CSV application to support an `each` method to return a `CsvRow` object . Use `missing method` on that `CsvRow` to return the value for the column for a given heading. [Solution](day3.rb)
