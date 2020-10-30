@@ -21,6 +21,10 @@ module ActsAsCsv
             end
         end
 
+        def each(&block)
+            @csv_contents.each {|row| block.call row}
+        end
+
         attr_accessor :headers, :csv_contents
         def initialize
             read
@@ -33,7 +37,12 @@ class RubyCsv
     acts_as_csv
 end
 
-m = RubyCsv.new
-puts m.headers.inspect
-puts m.csv_contents.inspect
+if $PROGRAM_NAME == __FILE__
+    m = RubyCsv.new
+    puts m.headers.inspect
+    puts m.csv_contents.inspect
+
+    csv = RubyCsv.new
+    csv.each {|row| puts row.inspect}
+end
 
