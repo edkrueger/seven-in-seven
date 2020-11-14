@@ -17,8 +17,8 @@ How can you tell what slots a prototype accepts? [Solution](day1_typing.io)
 What is the difference between `=` (equals), `:=`(colon equals), and `::=` (colon colon equals)? When would you use each one? [Solution](day1_answer.io)  
 
 Do:  
-Run an Io program from a file.  
-Execute the code in a slot givin its name.  
+Run an Io program from a file.  Run with `io day1_do.io`.  
+Execute the code in a slot givin its name.  [Solution](day1_do.io)
 
 
 ## Day 2
