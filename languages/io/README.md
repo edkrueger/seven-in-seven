@@ -23,5 +23,7 @@ Execute the code in a slot givin its name.  [Solution](day1_do.io)
 
 ## Day 2
 
+Do:  
+Implement Fibonacci recursively and iteratively. [Solution](day2_fibo.io)  
 
 ## Day 3
