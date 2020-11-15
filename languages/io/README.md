@@ -25,5 +25,7 @@ Execute the code in a slot givin its name.  [Solution](day1_do.io)
 
 Do:  
 Implement Fibonacci recursively and iteratively. [Solution](day2_fibo.io)  
+Change / to return 0 if the denominator is 0.  
+Sum a two-dimensional array/ [Solution](day2_2dsum.io)  
 
 ## Day 3
