@@ -1,9 +1,5 @@
 //  sum a two-dimensional array
-2dsum := method(2dlist,
-    sums := list()
-    2dlist foreach(_, v, sums append (v sum))
-    sums sum
-)
+2dsum := method(2dlist, 2dlist reduce(a, e, a + e sum, 0))
 
 2dlist := list(
     list(1, 2, 3, 4),
