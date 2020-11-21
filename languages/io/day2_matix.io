@@ -22,6 +22,18 @@ Matrix get := method(i, j,
     return self listRepr at(i) at(j)
 )
 
+Matrix transpose := method(
+    listTransposed := List clone
+    for(j, 0, self numColumns - 1,
+        row := List clone
+        for(i, 0, self numRows - 1,
+            row append(self get(i, j))
+        )
+        listTransposed append(row)
+    )
+    return Matrix clone fromList(listTransposed)
+)
+
 // Square Matrix Prototype
 SquareMatrix := Matrix clone
 Matrix transposeInPlace := method(
@@ -35,17 +47,31 @@ Matrix transposeInPlace := method(
     )
 )
 
-// demo Matrix
+"Demo Matrix fromList" println
 mat := Matrix clone
 mat fromList(list(list(1, 2, 3), list(4, 5, 6)))
 mat asList println
 mat numRows println
 mat numColumns println
+"\n" println
+
+"Demo Matrix get" println
 mat get(1, 1) println
+"\n" println
+
+"Demo Matrix set" println
 mat set(1, 2, 10)
 mat asList println
+"\n" println
 
-// demo Square Matrix transposeInPlace 
+"Demo Matrix transpose" println
+mat fromList(list(list(1, 2, 3), list(4, 5, 6)))
+mat asList println
+matT := mat transpose 
+matT asList println
+"\n" println
+
+"Demo SquareMatrix transposeInPlace" println
 sqMat := SquareMatrix clone
 sqMat fromList(list(
     list(1, 2, 3),
@@ -55,4 +81,5 @@ sqMat fromList(list(
 sqMat asList println
 sqMat transposeInPlace
 sqMat asList println
+"\n" println
 
