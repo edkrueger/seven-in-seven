@@ -28,6 +28,7 @@ Implement Fibonacci recursively and iteratively. [Solution](day2_fibo.io)
 Change / to return 0 if the denominator is 0. [Solution](day2_0div.io)
 Sum a two-dimensional array [Solution](day2_2dsum.io)  
 Add a slot called myAverage to List that takes the average. [Solution](day2_myAverage.io)
+Write a prototype for a two-dimensional list.  [Solution](day2_2slist.io)
 
 
 ## Day 3
