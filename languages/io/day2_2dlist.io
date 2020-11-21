@@ -1,30 +1,34 @@
-TwoDList := List clone
+Matrix := Object clone
+Matrix listRepr ::= nil
 
-TwoDList dim := method(x, y,
+Matrix dim := method(x, y,
+
+    setListRepr(List clone)
+
     for(i, 0, x - 1,
         row := List clone
         for(j, 0 , y - 1,
             row append(nil)
         )
-        self append(row)
+        self listRepr append(row)
     )
 )
 
-TwoDList set := method(i, j, value,
-    self at(i) atPut(j, value)
+Matrix set := method(i, j, value,
+    self listRepr at(i) atPut(j, value)
 )
 
-TwoDList get := method(i, j,
-    return self at(i) at(j)
+Matrix get := method(i, j,
+    return self listRepr at(i) at(j)
 )
 
+matA := Matrix clone
+matA dim (4, 3)
+matA set (1, 2, 3)
+matA listRepr println
+matA get(1, 2) println
 
-2dlist := TwoDList clone
-2dlist dim (4, 3)
-2dlist set (1, 2, 3)
-2dlist println
-2dlist get(1, 2) println
-
-
-
-
+matB := Matrix clone
+matB setListRepr(list(list(1, 2), list(3, 4) ))
+matB listRepr println
+matB get(1, 1) println
