@@ -30,5 +30,6 @@ Sum a two-dimensional array [Solution](day2_2dsum.io)
 Add a slot called myAverage to List that takes the average. [Solution](day2_myAverage.io)  
 Write a prototype for a two-dimensional list.  [Solution](day2_2slist.io)  
 Write a transpose method. [Solution](day2_matrix.io)  
+Write the matrix to a file, and read a matrix from a file. [Solution](day2_matrix.io)  
 
 ## Day 3

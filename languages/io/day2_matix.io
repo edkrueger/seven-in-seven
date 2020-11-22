@@ -34,6 +34,36 @@ Matrix transpose := method(
     return Matrix clone fromList(listTransposed)
 )
 
+Matrix writeFile := method(filename,
+    file := File with(filename)
+    file remove
+    file openForUpdating
+    for(i, 0, self asList size - 1,
+        file write(self asList at(i) join(", "))
+        file write("\n")
+    )
+    file close
+)
+
+Matrix readFile := method(filename,
+    file := File with(filename)
+    file openForReading
+    lines := file readLines
+    file close
+    
+    newlistRepr := List clone
+
+    for(i, 0, lines size - 1,
+        row := lines at(i) split(", ")
+        // row println
+        newlistRepr append(row)
+    )
+    
+    newMatrix := Matrix clone
+    newMatrix fromList(newlistRepr)
+    return newMatrix
+)
+
 // Square Matrix Prototype
 SquareMatrix := Matrix clone
 Matrix transposeInPlace := method(
@@ -70,6 +100,14 @@ mat asList println
 matT := mat transpose 
 matT asList println
 "\n" println
+
+
+"Demo Matrix writeFile and readFile" println
+matT writeFile("mat.txt")
+newMatrix := Matrix readFile("mat.txt")
+newMatrix asList println
+"\n" println
+
 
 "Demo SquareMatrix transposeInPlace" println
 sqMat := SquareMatrix clone
